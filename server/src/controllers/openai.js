@@ -10,7 +10,7 @@ const openai = new OpenAIApi(configuration);
 
 export const getFromOpenAI = async (req, res) => {
   try {
-    res.status(200).send({ message: "Hello from jeremX" });
+    res.status(200).json({ message: "Hello from jeremX" });
   } catch (err) {
     res.status(500).json(err.message);
   }
