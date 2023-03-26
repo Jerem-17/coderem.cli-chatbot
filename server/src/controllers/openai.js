@@ -34,6 +34,6 @@ export const postOnOpenAI = async (req, res) => {
       bot: response.data.choices[0].text,
     });
   } catch (err) {
-    res.status(500).json(err.message);
+    res.status(500).json({error: err.message});
   }
 };
