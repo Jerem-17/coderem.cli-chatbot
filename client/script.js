@@ -81,7 +81,7 @@ const handleSubmit = async (event) => {
 
   /* fetch data from server -> bot's response */
 
-  const response = await fetch("http://localhost:5000/api/post", {
+  const response = await fetch("http://localhost:5000/api/", {
     method: "POST",
     headers: {
       "Content-type": "application/json",
@@ -101,7 +101,7 @@ const handleSubmit = async (event) => {
     typeText(messageDiv, parsedData);
   } else {
     const err = await response.text();
-
+    
     messageDiv.innerHTML = "Something went wrong";
 
     alert(err);
